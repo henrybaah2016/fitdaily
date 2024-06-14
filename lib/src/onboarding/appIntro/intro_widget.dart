@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class IntroWidget extends StatelessWidget {
   const IntroWidget({
@@ -55,7 +56,6 @@ class IntroWidget extends StatelessWidget {
               ),
             ),
           ),
-
           Positioned(
             bottom: 0,
             right: 0,
@@ -90,7 +90,7 @@ class IntroWidget extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16)),
                             onPressed: () {},
-                            child: const Text('Continue',
+                            child: const Text('Get Started',
                                 style: TextStyle(color: Color(0xff0d0d0d))),
                           ),
                         ),
@@ -99,10 +99,7 @@ class IntroWidget extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(image),
-                    fit: BoxFit.fill
-                )
-            ),
+                    image: AssetImage(image), fit: BoxFit.cover)),
           ),
           Positioned(
             bottom: 0,
@@ -116,14 +113,15 @@ class IntroWidget extends StatelessWidget {
                     Container(
                       width: 90,
                       height: 40,
-                      margin: EdgeInsets.only(right: 30,bottom: 220),
+                      margin: EdgeInsets.only(right: 30, bottom: 220),
                       decoration: BoxDecoration(
                         color: Colors.transparent,
                         border: Border.all(
                           color: Color(0xffffffff), // Border color
                           width: 2, // Border width
                         ),
-                        borderRadius: BorderRadius.circular(100), // Rounded corners
+                        borderRadius:
+                            BorderRadius.circular(100), // Rounded corners
                       ),
                       child: TextButton(
                         onPressed: () {},
@@ -155,17 +153,25 @@ class IntroWidget extends StatelessWidget {
                           height: 62,
                         ),
                         Text(title,
-                            style: const TextStyle(
-                                fontSize: 24, color: Color(0xffffffff), fontWeight: FontWeight.bold)),
+                            style: GoogleFonts.montserrat(
+                               textStyle:  TextStyle(
+                                    fontSize: 26,
+                                    color: Color(0xffffffff),
+                                    fontWeight: FontWeight.w600)
+                            )),
                         const SizedBox(
                           height: 10,
                         ),
                         Text(
                           description,
-                          style: const TextStyle(
-                              fontSize: 24, height: 1.5,fontWeight: FontWeight.w400, color: Color(0xffffffff)),
-                          textAlign: TextAlign.center,
-                        )
+                          style: GoogleFonts.montserrat(
+                           textStyle:  TextStyle(
+                                fontSize: 24,
+                                height: 1.5,
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xffffffff)
+                          ),
+                        ))
                       ],
                     ),
                   ),
@@ -174,38 +180,39 @@ class IntroWidget extends StatelessWidget {
                     padding: const EdgeInsets.all(16),
                     child: skip
                         ? Container(
-                      height: 57,
-                      width: double.infinity,
-                      margin: EdgeInsets.only(left: 20, right: 20,bottom: 10),
-                      decoration: BoxDecoration(
-                          color: Color(0xfffdae07),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: SizedBox(
-                        child: MaterialButton(
-                          elevation: 0,
-                          color: Color(0xfffdae07),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16)),
-                          onPressed: () {},
-                          child: const Text('Continue',
-                              style: TextStyle(color: Color(0xff0d0d0d))),
-                        ),
-                      ),
-                    )
+                            height: 57,
+                            width: double.infinity,
+                            margin: EdgeInsets.only(
+                                left: 20, right: 20, bottom: 10),
+                            decoration: BoxDecoration(
+                                color: Color(0xfffdae07),
+                                borderRadius: BorderRadius.circular(20)),
+                            child: SizedBox(
+                              child: MaterialButton(
+                                elevation: 0,
+                                color: Color(0xfffdae07),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16)),
+                                onPressed: () {},
+                                child: const Text('Continue',
+                                    style: TextStyle(color: Color(0xff0d0d0d))),
+                              ),
+                            ),
+                          )
                         : Container(
-                      margin: EdgeInsets.only(left: 20, right: 20),
-                      child: SizedBox(
-                        height: 57,
-                        child: MaterialButton(
-                          color: Color(0xfffdae07),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16)),
-                          onPressed: () {},
-                          child: const Text('Continue',
-                              style: TextStyle(color: Color(0xff0d0d0d))),
-                        ),
-                      ),
-                    )),
+                            margin: EdgeInsets.only(left: 20, right: 20),
+                            child: SizedBox(
+                              height: 57,
+                              child: MaterialButton(
+                                color: Color(0xfffdae07),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16)),
+                                onPressed: () {},
+                                child: const Text('Continue',
+                                    style: TextStyle(color: Color(0xff0d0d0d))),
+                              ),
+                            ),
+                          )),
               ],
             ),
           ),

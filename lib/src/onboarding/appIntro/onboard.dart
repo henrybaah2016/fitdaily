@@ -44,7 +44,7 @@ class _OnboardState extends State<Onboard> {
     {
       'color': '#0d0d0d',
       'title': 'Wellness Anywhere',
-      'image': 'assets/images/trainer_one.png',
+      'image': 'assets/images/user_one.png',
       'description': 'No Gym Needed',
       'skip': true
     },
