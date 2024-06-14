@@ -37,21 +37,21 @@ class _OnboardState extends State<Onboard> {
     {
       'color': '#0d0d0d',
       'title': 'Crush Daily Goals',
-      'image': 'assets/images/trainer_one.png',
+      'image': 'assets/images/user_three.png',
       'description':  "Set, Sweat, Succeed",
       'skip': true
     },
     {
       'color': '#0d0d0d',
       'title': 'Wellness Anywhere',
-      'image': 'assets/images/user_one.png',
+      'image': 'assets/images/user_two.png',
       'description': 'No Gym Needed',
       'skip': true
     },
     {
       'color': '#0d0d0d',
       'title': 'Serious Gains',
-      'image': 'assets/images/trainer_one.png',
+      'image': 'assets/images/user_one.png',
       'description': 'Anytime, Anywhere',
       'skip': false
     },
