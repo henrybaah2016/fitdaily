@@ -36,23 +36,23 @@ class _OnboardState extends State<Onboard> {
   final List<Map<String, dynamic>> _pages = [
     {
       'color': '#0d0d0d',
-      'title': 'Hmmm, Healthy food',
-      'image': 'assets/images/logo.png',
-      'description': "A variety of foods made by the best chef. Ingredients are easy to find, all delicious flavors can only be found at cookbunda",
+      'title': 'Crush Daily Goals',
+      'image': 'assets/images/trainer_one.png',
+      'description':  "Set, Sweat, Succeed",
       'skip': true
     },
     {
       'color': '#0d0d0d',
-      'title': 'Fresh Drinks, Stay Fresh',
-      'image': 'assets/images/logo.png',
-      'description': 'Not all food, we provide clear healthy drink options for you. Fresh taste always accompanies you',
+      'title': 'Wellness Anywhere',
+      'image': 'assets/images/trainer_one.png',
+      'description': 'No Gym Needed',
       'skip': true
     },
     {
       'color': '#0d0d0d',
-      'title': 'Let\'s Cooking',
-      'image': 'assets/images/logo.png',
-      'description': 'Are you ready to make a dish for your friends or family? create an account and cooks',
+      'title': 'Serious Gains',
+      'image': 'assets/images/trainer_one.png',
+      'description': 'Anytime, Anywhere',
       'skip': false
     },
   ];
@@ -84,7 +84,7 @@ class _OnboardState extends State<Onboard> {
               }
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height / 1.75,
+            top: MediaQuery.of(context).size.height / 1.18,
             right: 0,
             left: 0,
             child: Column(
@@ -119,16 +119,16 @@ class _OnboardState extends State<Onboard> {
   Widget _indicatorsTrue() {
     final String color;
     if(_activePage == 0){
-      color = '#ffe24e';
+      color = '#fdae07';
     } else  if(_activePage ==  1) {
-      color = '#a3e4f1';
+      color = '#fdae07';
     } else {
-      color = '#31b77a';
+      color = '#fdae07';
     }
 
     return AnimatedContainer(
       duration: const Duration(microseconds: 300),
-      height: 6,
+      height: 8,
       width: 42,
       margin: const EdgeInsets.only(right: 8),
       decoration: BoxDecoration(
@@ -141,12 +141,12 @@ class _OnboardState extends State<Onboard> {
   Widget _indicatorsFalse() {
     return AnimatedContainer(
       duration: const Duration(microseconds: 300),
-      height: 8,
-      width: 8,
+      height: 10,
+      width: 10,
       margin: const EdgeInsets.only(right: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
-        color: Colors.grey.shade100,
+        color: Color(0xffe7e7e7),
       ),
     );
   }

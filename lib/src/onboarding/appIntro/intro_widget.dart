@@ -9,7 +9,8 @@ class IntroWidget extends StatelessWidget {
     required this.skip,
     required this.image,
     required this.onTab,
-    required this.index,});
+    required this.index,
+  });
 
   final String color;
   final String title;
@@ -21,12 +22,81 @@ class IntroWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ColoredBox(
-      color: hexToColor(color),
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/logo.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
       child: Stack(
         children: [
+          Positioned(
+            right: 0,
+            top: 60,
+            child: Container(
+              width: 90,
+              height: 40,
+              margin: EdgeInsets.only(right: 30),
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                border: Border.all(
+                  color: Color(0xff000000), // Border color
+                  width: 2, // Border width
+                ),
+                borderRadius: BorderRadius.circular(100), // Rounded corners
+              ),
+              child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Skip',
+                  style: TextStyle(color: Color(0xff000000)),
+                ),
+              ),
+            ),
+          ),
+
+          Positioned(
+            bottom: 0,
+            right: 0,
+            left: 0,
+            child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: skip
+                    ? Container(
+                        height: 57,
+                        margin: EdgeInsets.only(left: 20, right: 20),
+                        decoration: BoxDecoration(
+                            color: Color(0xfffdae07),
+                            borderRadius: BorderRadius.circular(20)),
+                        child: SizedBox(
+                          child: MaterialButton(
+                            elevation: 0,
+                            color: Color(0xfffdae07),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16)),
+                            onPressed: () {},
+                            child: const Text('Continue',
+                                style: TextStyle(color: Color(0xff0d0d0d))),
+                          ),
+                        ),
+                      )
+                    : Container(
+                        margin: EdgeInsets.only(left: 20, right: 20),
+                        child: SizedBox(
+                          height: 57,
+                          child: MaterialButton(
+                            color: Color(0xfffdae07),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16)),
+                            onPressed: () {},
+                            child: const Text('Continue',
+                                style: TextStyle(color: Color(0xff0d0d0d))),
+                          ),
+                        ),
+                      )),
+          ),
           Container(
-            height: MediaQuery.of(context).size.height / 1.86,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(image),
@@ -38,66 +108,107 @@ class IntroWidget extends StatelessWidget {
             bottom: 0,
             right: 0,
             left: 0,
-            child: Container(
-              height: MediaQuery.of(context).size.height / 2.16,
-              decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.only(
-                    topLeft: index == 0 ? const Radius.circular(100) : const Radius.circular(0),
-                    topRight: index == 2 ? const Radius.circular(100) : const Radius.circular(0),
-                  )
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 45),
-                child: Column(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const SizedBox(height: 62,),
-                    Text(title, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 16,),
-                    Text(description, style: const TextStyle(fontSize: 18, height: 1.5, color: Colors.grey), textAlign: TextAlign.center,)
+                    Container(
+                      width: 90,
+                      height: 40,
+                      margin: EdgeInsets.only(right: 30,bottom: 220),
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        border: Border.all(
+                          color: Color(0xffffffff), // Border color
+                          width: 2, // Border width
+                        ),
+                        borderRadius: BorderRadius.circular(100), // Rounded corners
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Skip',
+                          style: TextStyle(color: Color(0xffffffff)),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-              ),
-            ),
-          ),
-          Positioned(
-            bottom: 20,
-            right: 0,
-            left: 0,
-            child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: skip
-                    ? Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text('Skip Now', style: TextStyle(color: Colors.black),),
-                    ),
-                    GestureDetector(
-                      onTap: onTab,
-                      child: Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                            color: hexToColor(color),
-                            borderRadius: BorderRadius.circular(50)
+                Container(
+                  height: MediaQuery.of(context).size.height / 1.90,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.only(
+                        topLeft: index == 0
+                            ? const Radius.circular(100)
+                            : const Radius.circular(0),
+                        topRight: index == 2
+                            ? const Radius.circular(100)
+                            : const Radius.circular(0),
+                      )),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 45),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 62,
                         ),
-                        child: const Icon(Icons.arrow_circle_right, color: Colors.white, size: 42),
+                        Text(title,
+                            style: const TextStyle(
+                                fontSize: 24, color: Color(0xffffffff), fontWeight: FontWeight.bold)),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          description,
+                          style: const TextStyle(
+                              fontSize: 24, height: 1.5,fontWeight: FontWeight.w400, color: Color(0xffffffff)),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: skip
+                        ? Container(
+                      height: 57,
+                      width: double.infinity,
+                      margin: EdgeInsets.only(left: 20, right: 20,bottom: 10),
+                      decoration: BoxDecoration(
+                          color: Color(0xfffdae07),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: SizedBox(
+                        child: MaterialButton(
+                          elevation: 0,
+                          color: Color(0xfffdae07),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16)),
+                          onPressed: () {},
+                          child: const Text('Continue',
+                              style: TextStyle(color: Color(0xff0d0d0d))),
+                        ),
                       ),
                     )
-                  ],
-                )
-                    :  SizedBox(
-                  height: 46,
-                  child: MaterialButton(
-                    color: hexToColor(color),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                    onPressed: () {},
-                    child: const Text('Get Started', style: TextStyle(color: Colors.white)),
-                  ),
-                )
+                        : Container(
+                      margin: EdgeInsets.only(left: 20, right: 20),
+                      child: SizedBox(
+                        height: 57,
+                        child: MaterialButton(
+                          color: Color(0xfffdae07),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16)),
+                          onPressed: () {},
+                          child: const Text('Continue',
+                              style: TextStyle(color: Color(0xff0d0d0d))),
+                        ),
+                      ),
+                    )),
+              ],
             ),
-          )
+          ),
         ],
       ),
     );
@@ -107,5 +218,6 @@ class IntroWidget extends StatelessWidget {
 Color hexToColor(String hex) {
   assert(RegExp(r'^#([0-9a-fA-F]{6})|([0-9a-fA-F]{8})$').hasMatch(hex));
 
-  return Color(int.parse(hex.substring(1), radix: 16) + (hex.length == 7 ? 0xFF000000 : 0x00000000));
+  return Color(int.parse(hex.substring(1), radix: 16) +
+      (hex.length == 7 ? 0xFF000000 : 0x00000000));
 }
