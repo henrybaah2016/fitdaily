@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/auth/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -77,8 +78,13 @@ class IntroWidget extends StatelessWidget {
                           BorderRadius.circular(100), // Rounded corners
                     ),
                     child: TextButton(
-                      onPressed: () {},
-                      child: const Text(
+                      onPressed: () {
+                        // Navigate to the second page
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Signup()),
+                        );
+                      },                      child: const Text(
                         'Skip',
                         style: TextStyle(color: Color(0xffffffff)),
                       ),
@@ -143,7 +149,13 @@ class IntroWidget extends StatelessWidget {
                               color: Color(0xfffdae07),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16)),
-                              onPressed: () {},
+                              onPressed: () {
+                                // Navigate to the second page
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Signup()),
+                                );
+                              },
                               child: const Text('Continue',
                                   style: TextStyle(color: Color(0xff0d0d0d))),
                             ),
@@ -155,10 +167,17 @@ class IntroWidget extends StatelessWidget {
                           child: SizedBox(
                             height: 57,
                             child: MaterialButton(
+
                               color: Color(0xfffdae07),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16)),
-                              onPressed: () {},
+                              onPressed: () {
+                                // Navigate to the second page
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Signup()),
+                                );
+                              },
                               child: const Text('Get Started',
                                   style: TextStyle(color: Color(0xff0d0d0d))),
                             ),

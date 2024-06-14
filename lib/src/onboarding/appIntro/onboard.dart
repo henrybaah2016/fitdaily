@@ -48,13 +48,13 @@ class _OnboardState extends State<Onboard> {
       'description': 'No Gym Needed',
       'skip': true
     },
-    {
-      'color': '#0d0d0d',
-      'title': 'Boldly Step out',
-      'image': 'assets/images/user_one.png',
-      'description': 'Exercise on the App',
-      'skip': true
-    },
+    // {
+    //   'color': '#0d0d0d',
+    //   'title': 'Boldly Step out',
+    //   'image': 'assets/images/user_one.png',
+    //   'description': 'Exercise on the App',
+    //   'skip': true
+    // },
     {
       'color': '#0d0d0d',
       'title': 'Serious Gains',
