@@ -50,8 +50,15 @@ class _OnboardState extends State<Onboard> {
     },
     {
       'color': '#0d0d0d',
-      'title': 'Serious Gains',
+      'title': 'Boldly Step out',
       'image': 'assets/images/user_one.png',
+      'description': 'Exercise on the App',
+      'skip': true
+    },
+    {
+      'color': '#0d0d0d',
+      'title': 'Serious Gains',
+      'image': 'assets/images/user_four.png',
       'description': 'Anytime, Anywhere',
       'skip': false
     },
