@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/reasons/reasons.dart';
 import 'package:fitdaily/src/auth/phone_verification/phone_verification.dart';
 import 'package:fitdaily/src/auth/reset_password_email/reset_password_email.dart';
 import 'package:fitdaily/src/auth/signup/signup.dart';
@@ -212,7 +213,7 @@ class _LoginState extends State<Login> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PhoneVerification()),
+                      MaterialPageRoute(builder: (context) => Reasons()),
                     );
                   },
                   style: ElevatedButton.styleFrom(

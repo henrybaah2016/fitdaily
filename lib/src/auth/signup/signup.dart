@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/reasons/reasons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -217,7 +218,7 @@ class _SignupState extends State<Signup> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Signup()),
+                      MaterialPageRoute(builder: (context) => Reasons()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
