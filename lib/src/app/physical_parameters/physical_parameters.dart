@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -57,16 +58,16 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
                     textStyle: TextStyle(
                       color: Color(0xffffffff),
                       fontSize: 36,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 30),
+                margin: EdgeInsets.only(top: 10),
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
+                  const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
                   child: Row(
 
                     children: [
@@ -116,7 +117,7 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
                     textStyle: TextStyle(
                       color: Color(0xffffffff),
                       fontSize: 36,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -187,9 +188,9 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
                           activeFgColor: Color(0xff0d0d0d),
                           inactiveBgColor: Color(0xff424242),
                           inactiveFgColor: Color(0xffa1a1a1),
-                          initialLabelIndex: 1,
+                          initialLabelIndex: 0,
                           totalSwitches: 2,
-                          labels: ['cm', 'ft'],
+                          labels: ['kg', 'Lbs'],
                           radiusStyle: true,
                           onToggle: (index) {
                             print('switched to: $index');
@@ -214,7 +215,7 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
                     textStyle: TextStyle(
                       color: Color(0xffffffff),
                       fontSize: 36,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -313,7 +314,7 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
                     textStyle: TextStyle(
                       color: Color(0xffffffff),
                       fontSize: 36,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -321,21 +322,21 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
               Container(
                 margin: EdgeInsets.only(top: 10),
                 child: Padding(
-                  padding:
-                  const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
-                  child: Text(
-                    "Your BMI is 26 which means you are overweight (According to your height your weight must be between 55-75 kgs in order to be considered healthy)"
-                        ,
-                    textAlign: TextAlign.left,
-                    style: GoogleFonts.montserrat(
-                      height: 1.2,
-                      textStyle: TextStyle(
-                        color: Color(0xffcccccc),
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
+                    padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 0),
+                    child: Text(
+                      "Your BMI is 26 which means you are overweight (According to your height your weight must be between 55-75 kgs in order to be considered healthy)"
+                      ,
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.montserrat(
+                        height: 1.2,
+                        textStyle: TextStyle(
+                          color: Color(0xffcccccc),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
-                  )
+                    )
                 ),
               ),
 
@@ -347,14 +348,14 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => WorkoutLevel()),
+                      MaterialPageRoute(builder: (context) => Home()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xfffdae07),
                     minimumSize: const Size(double.infinity, 52),
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 45, vertical: 0),
+                    const EdgeInsets.symmetric(horizontal: 45, vertical: 0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
                     ),
@@ -386,11 +387,11 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
           padding: EdgeInsets.symmetric(horizontal: 5,vertical: 10),
           decoration: BoxDecoration(
             color:
-                _selectedValue == value ? Color(0xfffdae07) : Color(0xff0d0d0d),
+            _selectedValue == value ? Color(0xfffdae07) : Color(0xff0d0d0d),
             borderRadius: BorderRadius.circular(10),
             border: Border.all(
               color:
-                  _selectedValue == value ? Color(0xfffdae07) : Color(0xff343434),
+              _selectedValue == value ? Color(0xfffdae07) : Color(0xff343434),
               width: 0.5,
             ),
           ),
