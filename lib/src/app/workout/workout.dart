@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/strength/strength.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -64,68 +65,77 @@ class _WorkoutState extends State<Workout> {
 
               Column(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 20,left: 25,right: 25),
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/strength.png'),
-                        fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Strength()),
+                      );
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 20,left: 25,right: 25),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/strength.png'),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+
                       ),
-                      borderRadius: BorderRadius.circular(16),
-
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 30),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment:CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 20.0),
-                                child: Text(
-                                  "Strength",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.montserrat(
-                                    height: 2.3,
-                                    textStyle: const TextStyle(
-                                      color: Color(0xffe5e3e3),
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment:CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20.0),
+                                  child: Text(
+                                    "Strength",
+                                    textAlign: TextAlign.left,
+                                    style: GoogleFonts.montserrat(
+                                      height: 2.3,
+                                      textStyle: const TextStyle(
+                                        color: Color(0xffe5e3e3),
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 20.0),
-                                child: Text(
-                                  "120 workout in total",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.montserrat(
-                                    height: 1.2,
-                                    textStyle: const TextStyle(
-                                      color: Color(0xffe5e3e3),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20.0),
+                                  child: Text(
+                                    "120 workout in total",
+                                    textAlign: TextAlign.left,
+                                    style: GoogleFonts.montserrat(
+                                      height: 1.2,
+                                      textStyle: const TextStyle(
+                                        color: Color(0xffe5e3e3),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
+                              ],
+                            ),
 
-                          Container(
-                            height: 30,
-                            width: 30,
-                            margin: const EdgeInsets.symmetric(vertical: 15,horizontal: 20),
-                            child: Image.asset('assets/images/play.png'),
-                          ),
+                            Container(
+                              height: 30,
+                              width: 30,
+                              margin: const EdgeInsets.symmetric(vertical: 15,horizontal: 20),
+                              child: Image.asset('assets/images/play.png'),
+                            ),
 
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
+
                   Container(
                     margin: const EdgeInsets.only(top: 20,left: 25,right: 25),
                     decoration: BoxDecoration(
