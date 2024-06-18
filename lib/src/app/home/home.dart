@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/workout/workout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -308,24 +309,33 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left:25,top: 10,right: 25),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 8.0, top: 10,bottom: 0),
-                            child: Text(
-                              "See all",
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.montserrat(
-                                height: 1.2,
-                                textStyle: const TextStyle(
-                                  color: Color(0xffffbc3c),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Workout()),
+                            );
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(left:25,top: 10,right: 25),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8.0, top: 10,bottom: 0),
+                              child: Text(
+                                "See all",
+                                textAlign: TextAlign.left,
+                                style: GoogleFonts.montserrat(
+                                  height: 1.2,
+                                  textStyle: const TextStyle(
+                                    color: Color(0xffffbc3c),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
+                        )
+
                       ],
                     ),
 
