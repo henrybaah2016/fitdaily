@@ -769,7 +769,8 @@ class _StrengthState extends State<Strength> {
               ),
             ],
           ),
-        ));
+        )
+    );
   }
 
   Widget _buildRadioButton(int value, String age) {

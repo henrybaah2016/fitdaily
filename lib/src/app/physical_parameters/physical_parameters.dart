@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/app_main/app.dart';
 import 'package:fitdaily/src/app/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -348,7 +349,7 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home()),
+                      MaterialPageRoute(builder: (context) => AppMain()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
