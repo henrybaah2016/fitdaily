@@ -83,7 +83,7 @@ add_dependencies(${BINARY_NAME} flutter_assemble)
 # the default top-level location.
 set_target_properties(${BINARY_NAME}
   PROPERTIES
-  RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/intermediates_do_not_run"
+  RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/montserratmediates_do_not_run"
 )
 
 

@@ -1,10 +1,8 @@
 import 'package:fitdaily/src/app/app_main/app.dart';
-import 'package:fitdaily/src/app/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:toggle_switch/toggle_switch.dart';
-import '../workout_level/workout_level.dart';
 
 class PhysicalParameters extends StatefulWidget {
   PhysicalParameters({Key? key}) : super(key: key);
@@ -79,10 +77,7 @@ class _PhysicalParametersState extends State<PhysicalParameters> {
 
                             child: Row(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(right:4.0),
-                                  child: _buildRadioButton(0,"18-24"),
-                                ),
+                                _buildRadioButton(0,"18-24"),
                                 _buildRadioButton(1,"25-34"),
                                 _buildRadioButton(2,"35-44"),
                                 _buildRadioButton(3,"45-54"),

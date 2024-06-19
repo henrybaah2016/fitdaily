@@ -1,6 +1,5 @@
 import 'package:fitdaily/src/app/food/food.dart';
 import 'package:fitdaily/src/app/home/home.dart';
-import 'package:fitdaily/src/app/physical_parameters/physical_parameters.dart';
 import 'package:fitdaily/src/app/reasons/reasons.dart';
 import 'package:fitdaily/src/app/strength/strength.dart';
 import 'package:fitdaily/src/app/workout/workout.dart';

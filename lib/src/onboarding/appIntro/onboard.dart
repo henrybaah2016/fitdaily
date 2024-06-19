@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
 import 'intro_widget.dart';
 
 class AppScrollBehavior extends MaterialScrollBehavior {
