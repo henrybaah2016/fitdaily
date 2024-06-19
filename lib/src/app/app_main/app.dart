@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/food/food.dart';
 import 'package:fitdaily/src/app/home/home.dart';
 import 'package:fitdaily/src/app/physical_parameters/physical_parameters.dart';
 import 'package:fitdaily/src/app/reasons/reasons.dart';
@@ -32,7 +33,7 @@ class _AppMainState extends State<AppMain> {
     {
       'label': '',
       'icon': 'assets/images/menu.png',
-      'widget': PhysicalParameters(),
+      'widget': Food(),
     },
     {
       'label': '',
@@ -54,6 +55,7 @@ class _AppMainState extends State<AppMain> {
         index: _selectedIndex,
         children: _tabs.map((tab) => tab['widget'] as Widget).toList(),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         items: _tabs.map((tab) {
           return BottomNavigationBarItem(
