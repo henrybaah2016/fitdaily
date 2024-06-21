@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/notification/notification.dart';
 import 'package:fitdaily/src/app/workout/workout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -53,14 +54,23 @@ class _HomeState extends State<Home> {
                         ),
                          Row(
                           children: [
-                            Padding(
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Notifications()),
+                                );
+                              },
+                              child: Padding(
                                 padding: EdgeInsets.only(right: 4.0),
                                 child: Container(
                                   height: 24,
                                   width: 24,
                                   child: Image.asset('assets/images/calendar.png'),
                                 ),
+                              ),
                             ),
+
                              Padding(
                               padding: EdgeInsets.only(left: 8.0),
                               child: Container(

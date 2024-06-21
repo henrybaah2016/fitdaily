@@ -8,14 +8,18 @@ import 'package:video_player/video_player.dart';
 class FlexiDemo extends StatefulWidget {
   FlexiDemo({
     Key? key,
+
     this.title = 'Flexi Video Player Demo',
+
   }) : super(key: key);
 
   final String title;
 
   @override
   State<StatefulWidget> createState() {
-    return _FlexiDemoState();
+    return _FlexiDemoState(
+
+    );
   }
 }
 
@@ -43,7 +47,7 @@ class _FlexiDemoState extends State<FlexiDemo> {
     });
     try {
       _videoPlayerController1 = VideoPlayerController.network(
-          "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
+          "https://www.youtube.com/watch?v=1BZM2Vre5oc");
 
       await _videoPlayerController1.initialize();
 
@@ -53,7 +57,7 @@ class _FlexiDemoState extends State<FlexiDemo> {
           start: const Duration(seconds: 0),
           end: Duration(
               seconds: _videoPlayerController1.value.duration.inSeconds),
-          text: 'Whats up? :)',
+          text: '',
         ),
       ];
 
@@ -132,6 +136,7 @@ class _FlexiDemoState extends State<FlexiDemo> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: widget.title,
       home: Scaffold(
           backgroundColor: Color(0xff0d0d0d),
