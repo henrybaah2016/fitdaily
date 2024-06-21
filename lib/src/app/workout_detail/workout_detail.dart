@@ -2,6 +2,7 @@ import 'package:fitdaily/src/app/app_main/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:read_more_text/read_more_text.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class WorkoutDetail extends StatefulWidget {
@@ -196,7 +197,6 @@ class _WorkoutDetailState extends State<WorkoutDetail> {
                           margin: EdgeInsets.only(left: 10,right: 10,top: 20),
                           child: Column(
                             children: [
-                              
                               Text(
                                 "Improve your body shape to be more ideal with various tutorial videos for you that can help achievement",
                                 textAlign: TextAlign.left,
