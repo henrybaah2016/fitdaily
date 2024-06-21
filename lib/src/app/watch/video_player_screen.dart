@@ -1,3 +1,4 @@
+import 'package:fitdaily/src/app/calorie/burn.dart';
 import 'package:flexivideoplayer/flexivideoplayer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -507,129 +508,138 @@ class _FlexiDemoState extends State<FlexiDemo> {
                           ),
                         ],
                       ),
-                      Container(
-                        margin:
-                            const EdgeInsets.only(top: 20, left: 10, right: 10),
-                        decoration: BoxDecoration(
-                          color: Color(0xff313131), // Background color
-                          borderRadius:
-                              BorderRadius.circular(10.0), // Rounded corners
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Container(
-                                height: 70,
-                                width: 70,
-                                margin: EdgeInsets.only(
-                                    left: 10, right: 10, top: 10, bottom: 10),
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/running_one.png'),
-                                    fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Burn()),
+                          );
+                        },
+                        child: Container(
+                          margin:
+                          const EdgeInsets.only(top: 20, left: 10, right: 10),
+                          decoration: BoxDecoration(
+                            color: Color(0xff313131), // Background color
+                            borderRadius:
+                            BorderRadius.circular(10.0), // Rounded corners
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: Container(
+                                  height: 70,
+                                  width: 70,
+                                  margin: EdgeInsets.only(
+                                      left: 10, right: 10, top: 10, bottom: 10),
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/running_one.png'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                    borderRadius: BorderRadius.circular(16),
                                   ),
-                                  borderRadius: BorderRadius.circular(16),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 0.0, vertical: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 0.0),
-                                    child: Text(
-                                      "3. Running",
-                                      textAlign: TextAlign.left,
-                                      style: GoogleFonts.montserrat(
-                                        height: 2,
-                                        textStyle: const TextStyle(
-                                          color: Color(0xffe5e3e3),
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 0.0, vertical: 10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 0.0),
+                                      child: Text(
+                                        "3. Running",
+                                        textAlign: TextAlign.left,
+                                        style: GoogleFonts.montserrat(
+                                          height: 2,
+                                          textStyle: const TextStyle(
+                                            color: Color(0xffe5e3e3),
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 0),
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.only(
-                                              top: 6, right: 15),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            children: [
-                                              Container(
-                                                height: 16,
-                                                width: 16,
-                                                margin: const EdgeInsets.only(
-                                                    right: 5),
-                                                child: Image.asset(
-                                                    'assets/images/clock.png'),
-                                              ),
-                                              Text(
-                                                "60 min",
-                                                textAlign: TextAlign.left,
-                                                style: GoogleFonts.montserrat(
-                                                  height: 1.2,
-                                                  textStyle: const TextStyle(
-                                                    color: Color(0xff7c7c7c),
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
+                                    Container(
+                                      margin: EdgeInsets.only(left: 0),
+                                      child: Row(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            margin: const EdgeInsets.only(
+                                                top: 6, right: 15),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  height: 16,
+                                                  width: 16,
+                                                  margin: const EdgeInsets.only(
+                                                      right: 5),
+                                                  child: Image.asset(
+                                                      'assets/images/clock.png'),
+                                                ),
+                                                Text(
+                                                  "60 min",
+                                                  textAlign: TextAlign.left,
+                                                  style: GoogleFonts.montserrat(
+                                                    height: 1.2,
+                                                    textStyle: const TextStyle(
+                                                      color: Color(0xff7c7c7c),
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.only(top: 6),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            children: [
-                                              Container(
-                                                height: 16,
-                                                width: 16,
-                                                margin: const EdgeInsets.only(
-                                                    right: 5),
-                                                child: Image.asset(
-                                                    'assets/images/fire.png'),
-                                              ),
-                                              Text(
-                                                "600 kcal",
-                                                textAlign: TextAlign.left,
-                                                style: GoogleFonts.montserrat(
-                                                  height: 1.2,
-                                                  textStyle: const TextStyle(
-                                                    color: Color(0xff7c7c7c),
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
+                                          Container(
+                                            margin: const EdgeInsets.only(top: 6),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  height: 16,
+                                                  width: 16,
+                                                  margin: const EdgeInsets.only(
+                                                      right: 5),
+                                                  child: Image.asset(
+                                                      'assets/images/fire.png'),
+                                                ),
+                                                Text(
+                                                  "600 kcal",
+                                                  textAlign: TextAlign.left,
+                                                  style: GoogleFonts.montserrat(
+                                                    height: 1.2,
+                                                    textStyle: const TextStyle(
+                                                      color: Color(0xff7c7c7c),
+                                                      fontSize: 14,
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
+
 
                       Container(
                         margin:
