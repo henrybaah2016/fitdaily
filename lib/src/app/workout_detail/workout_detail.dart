@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:read_more_text/read_more_text.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
+import '../watch/video_player_screen.dart';
+
 class WorkoutDetail extends StatefulWidget {
   WorkoutDetail({Key? key}) : super(key: key);
 
@@ -507,7 +509,7 @@ class _WorkoutDetailState extends State<WorkoutDetail> {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => AppMain()),
+                                MaterialPageRoute(builder: (context) => FlexiDemo()),
                               );
                             },
                             style: ElevatedButton.styleFrom(

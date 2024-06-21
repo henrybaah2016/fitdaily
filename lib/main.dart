@@ -1,6 +1,5 @@
 
 import 'package:fitdaily/src/app/notification/notification.dart';
-import 'package:fitdaily/src/app/watch/video_player_screen.dart';
 import 'package:fitdaily/src/onboarding/splashscreen/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home:FlexiDemo(),
+      home:Splash(),
 
     );
   }
