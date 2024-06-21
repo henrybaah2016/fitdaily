@@ -143,7 +143,7 @@ class _WorkoutDetailState extends State<WorkoutDetail> {
                                             margin:
                                             const EdgeInsets.only(right: 5),
                                             child: Image.asset(
-                                                'assets/images/fire.png'),
+                                                'assets/images/play_circle.png'),
                                           ),
                                           Text(
                                             "1hr 30 min",
