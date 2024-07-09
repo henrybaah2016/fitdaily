@@ -3,7 +3,6 @@ import 'package:fitdaily/src/app/workout/workout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);

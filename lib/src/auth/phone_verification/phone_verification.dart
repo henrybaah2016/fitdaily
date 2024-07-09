@@ -20,7 +20,6 @@ class _PhoneVerificationState extends State<PhoneVerification> {
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
-
           title: Container(
             margin: EdgeInsets.only(top: 20),
             child: Text(

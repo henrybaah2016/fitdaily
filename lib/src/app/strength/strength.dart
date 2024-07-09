@@ -2,7 +2,6 @@ import 'package:fitdaily/src/app/workout_detail/workout_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
 class Strength extends StatefulWidget {
   Strength({Key? key}) : super(key: key);

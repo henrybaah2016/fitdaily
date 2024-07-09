@@ -1,10 +1,7 @@
 import 'package:fitdaily/src/app/app_main/app.dart';
-import 'package:fitdaily/src/app/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:read_more_text/read_more_text.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
 
 class Burn extends StatefulWidget {
@@ -51,11 +48,11 @@ class _BurnState extends State<Burn> {
         ),
 
         title: Container(
-          margin: EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 20),
           child: Text(
             "Today's Challenge",
             style: GoogleFonts.montserrat(
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                 color: Color(0xffc9c7c7),
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
@@ -67,22 +64,22 @@ class _BurnState extends State<Burn> {
       body: SingleChildScrollView(
         child: Container(
 
-          margin: EdgeInsets.only(top:10,bottom: 30,left:25,right:25),
+          margin: const EdgeInsets.only(top:10,bottom: 30,left:25,right:25),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 200,
               ),
               Center(child: CircularProgressWithIcon()),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 20),
                 child: Text(
                   "1,875",
                   style: GoogleFonts.montserrat(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Color(0xfffdae07),
                       fontSize: 40,
                       fontWeight: FontWeight.w600,
@@ -91,11 +88,11 @@ class _BurnState extends State<Burn> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 0),
+                margin: const EdgeInsets.only(top: 0),
                 child: Text(
                   "Calories burned",
                   style: GoogleFonts.montserrat(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Color(0xffc9c7c7),
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -103,7 +100,7 @@ class _BurnState extends State<Burn> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
               Container(
@@ -153,7 +150,7 @@ class CircularProgressWithIcon extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           width: 200,
           height: 200,
           child: CircularProgressIndicator(
